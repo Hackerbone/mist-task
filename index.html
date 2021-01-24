@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerb0ne | MIST Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="navbar">
+        <span>
+            <i class="fas fa-square"></i>
+            Logo
+        </span>
+    </div>
+    <div class="fade-card fc-1"></div>
+    <div class="fade-card fc-2"></div>
+    <div class="fade-card fc-3"></div>
+    <div class="fade-card fc-4"></div>
+
+    <div class="landing">
+
+        <div class="content">
+            <h1>Sign-up now, why? I don't know.. just do it already</h1>
+            <p class="tagline">Some random tagline because I lack creativity</p>
+            <div class="card">
+                <h3>Some random heading</h3>
+                <p>12,02,31,705 my App. number</p>
+            </div>
+            <button onclick="showForm() " class="button small-screen">Sign-up</button>
+
+        </div>
+
+        <div class="form">
+            <h1>Sign Up</h1>
+            <!-- <form action=""> -->
+            <div>
+                <label for="email" class="hide">Enter Email</label>
+                <input type="email" name="email" placeholder="Enter Email" onkeypress="showlabel(this)">
+            </div>
+            <div>
+                <label for="password" class="hide">Enter password</label>
+                <input id="pwd" type="password" name="password" placeholder="Enter password" onkeypress="showlabel(this)">
+            </div>
+            <div>
+                <label for="verify-password" class="hide">Verify password</label>
+                <input id="vpwd" type="password" name="verify-password" placeholder="Verify password" onkeypress="showlabel(this)">
+            </div>
+            <input class="button" type="submit" placeholder="Submit" value="Submit" onclick="check()">
+            <button onclick="hideForm() " class="button small-screen">Back</button>
+
+            <!-- </form> -->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function showlabel(e){
+            $(e).prev().fadeIn(100);
+            $(e).prev().removeClass('hide');
+           
+            
+        }
+        function check(){
+            let pwd = $("#pwd").val();
+            let vpwd = $("#vpwd").val();
+            console.log(pwd);
+            console.log(vpwd);
+            
+            if(pwd != vpwd){
+                alert("Passwords don't match, try again")
+            }
+            else{
+                alert("Cool, passwords match... umm you can leave now... I guess")
+            }
+        }
+
+        function showForm(){
+            $('.content').slideUp(400);
+            $('.form').fadeIn(500)  
+            $('.form').css('display','flex'); 
+        }
+        function hideForm(){
+            $('.content').fadeIn(500);
+            $('.form').slideUp(500)  
+        }
+        
+    </script>
+</body>
+
+</html>
