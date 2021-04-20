@@ -2,4 +2,4 @@
 
 ## Task 1 - Clone a website
 
-## Task 2 - Make Card Componenets
+## Task 2 - Make Card Components
