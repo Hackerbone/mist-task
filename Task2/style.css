@@ -15,7 +15,6 @@
     border-radius: 4rem;
     font-size: 1rem;
     font-weight: 500;
-    margin-left: 1rem;
     color: #3C3644;
 }
 
@@ -65,4 +64,11 @@
 .btn-accept:hover{
     background: rgb(110, 35, 145);
 
+}
+
+@media only screen and (max-width: 352px){
+    .date-badge{
+        display: inline-block !important;
+        margin: 1rem 0 !important;
+    }
 }
